@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateicos - Tu compañero de cada mateada</title>
+    <link rel="icon" href="assets/images/logo1.webp" type="image/webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logomateicos.webp" alt="Mateicos Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#historia">Nuestra Historia</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>EL MATE</h1>
+            <p>Mateicos, tu compañero de cada mateada</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Productos Principales -->
+        <section id="productos" class="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="img-container">
+                        <img src="assets/images/mateprincipal.webp" alt="Mates">
+                    </div>
+                    <h3>Mates</h3>
+                    <p>Mates artesanales de calabaza, elaborados con las mejores técnicas tradicionales.</p>
+                </div>
+                <div class="producto-card">
+                    <div class="img-container">
+                        <img src="assets/images/yerbero.jpeg" alt="Yerberos">
+                    </div>
+                    <h3>Yerberos</h3>
+                    <p>Yerberos con diseños únicos para mantener tu yerba siempre fresca.</p>
+                </div>
+                <div class="producto-card">
+                    <div class="img-container">
+                        <img src="assets/images/bombillasprincipal.webp" alt="Bombillas">
+                    </div>
+                    <h3>Bombillas</h3>
+                    <p>Bombillas de acero inoxidable con diseños exclusivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Envíos a todo el país</h3>
+                    <p>Hacemos llegar nuestros productos a cualquier rincón de Argentina.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Calidad Artesanal</h3>
+                    <p>Productos elaborados con las mejores materias primas y técnicas tradicionales.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Atención Personalizada</h3>
+                    <p>Te asesoramos por WhatsApp para encontrar el mate perfecto para vos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo -->
+        <section id="catalogo" class="catalogo">
+            <h2>Catálogo de Productos</h2>
+            <div class="catalogo-grid" id="catalogo-productos">
+                <!-- Products will be loaded dynamically with JavaScript -->
+            </div>
+        </section>
+
+        <!-- Historia -->
+        <section id="historia" class="historia">
+            <h2>Nuestra Historia</h2>
+            <div class="historia-content">
+                <img src="assets/images/imghistoria1.webp" alt="Historia Mateicos">
+                <div class="historia-texto">
+                    <p>Mateicos nació de la pasión por el mate y la artesanía. Desde 2020, nos dedicamos a crear productos únicos que combinan la tradición del mate con diseños contemporáneos. Cada pieza es elaborada con dedicación y amor por el oficio, buscando mantener viva la esencia de nuestra cultura.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reseñas -->
+        <section id="resenas" class="resenas">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="resenas-carousel">
+                <!-- Reviews will be loaded dynamically with JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo">
+                    <p class="footer-description">Tu compañero de cada mateada. Productos artesanales de la mejor calidad.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#historia">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +54 299 590-1714</li>
+                        <li><i class="fas fa-envelope"></i> mateicos.contacto@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Neuquén, Argentina</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Seguinos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/mateicos.oficial/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/mateicos" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/2995901714" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Mateicos – Todos los derechos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/2995901714" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button id="checkout-whatsapp" class="checkout-btn">
+                    Finalizar compra por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
