@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #2E5945;
     --secondary-color: #4A7963;
@@ -104,6 +103,7 @@ body {
     background: url('../assets/images/logohero.webp');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
     display: flex;
@@ -149,6 +149,30 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
+}
+
+/* Para asegurar que la imagen se vea bien en móviles */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll; /* Mejor rendimiento en móviles */
+        background-size: cover;
+        background-position: center 30%; /* Ajusta según tu imagen */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-position: center 40%; /* Centra la parte más importante */
+        background-size: cover;
+    }
+}
+
+/* Si quieres diferentes imágenes para diferentes tamaños */
+@media (max-width: 768px) {
+    .hero {
+        /* Puedes usar una imagen optimizada para móviles */
+        background-image: url('../assets/images/logohero-mobile.webp'), url('../assets/images/logohero.webp');
+    }
 }
 
 /* Sections General Styles */
