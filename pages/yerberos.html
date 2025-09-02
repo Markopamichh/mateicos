@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yerberos - Mateicos</title>
+    <link rel="icon" href="../assets/images/logo1.webp" type="image/webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/subcategorias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo1.webp" alt="Mateicos Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="../index.html#historia">Nuestra Historia</a></li>
+                <li><a href="../index.html#resenas">Reseñas</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="catalogo-hero">
+            <h1>Catálogo de Yerberos</h1>
+            <p>Mantené tu yerba siempre fresca con nuestros yerberos artesanales</p>
+        </section>
+
+        <!-- Catálogo de Yerberos -->
+        <section id="catalogo-yerberos" class="catalogo-section">
+            <div class="container">
+                
+                <!-- Yerberos Clásicos -->
+                <div class="subcategoria-section">
+                    <h2>Yerberos Clásicos</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero.jpeg" alt="Yerbero Madera Natural">
+                            <h3>Yerbero Madera Natural</h3>
+                            <p>Yerbero de madera de algarrobo con tapa hermética.</p>
+                            <span class="precio">$12.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-1', name: 'Yerbero Madera Natural', price: 12000, image: '../assets/images/yerbero-clasico-1.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero2.jpeg" alt="Yerbero Cerámica">
+                            <h3>Yerbero Cerámica</h3>
+                            <p>Diseño tradicional en cerámica esmaltada con motivos criollos.</p>
+                            <span class="precio">$15.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-2', name: 'Yerbero Cerámica', price: 15000, image: '../assets/images/yerbero-clasico-2.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero3.jpeg" alt="Yerbero Cuero">
+                            <h3>Yerbero Cuero</h3>
+                            <p>Yerbero forrado en cuero vacuno con cierre magnético.</p>
+                            <span class="precio">$18.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-3', name: 'Yerbero Cuero', price: 18000, image: '../assets/images/yerbero-clasico-3.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yerberos Premium -->
+                <div class="subcategoria-section">
+                    <h2>Yerberos Premium</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero-premium-1.jpg" alt="Yerbero Diseñador">
+                            <h3>Yerbero Diseñador</h3>
+                            <p>Diseño moderno con compartimentos separados para diferentes yerbas.</p>
+                            <span class="precio">$28.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-1', name: 'Yerbero Diseñador', price: 28000, image: '../assets/images/yerbero-premium-1.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero-premium-2.jpg" alt="Yerbero Acero Inox">
+                            <h3>Yerbero Acero Inox</h3>
+                            <p>Construcción en acero inoxidable con sistema de vacío.</p>
+                            <span class="precio">$32.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-2', name: 'Yerbero Acero Inox', price: 32000, image: '../assets/images/yerbero-premium-2.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero-premium-3.jpg" alt="Yerbero Luxury">
+                            <h3>Yerbero Luxury</h3>
+                            <p>Edición limitada con incrustaciones de plata y grabados.</p>
+                            <span class="precio">$45.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-3', name: 'Yerbero Luxury', price: 45000, image: '../assets/images/yerbero-premium-3.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sets Completos -->
+                <div class="subcategoria-section">
+                    <h2>Sets Completos</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/set-1.jpg" alt="Set Tradicional">
+                            <h3>Set Tradicional</h3>
+                            <p>Yerbero + Mate + Bombilla en estuche de regalo.</p>
+                            <span class="precio">$35.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-1', name: 'Set Tradicional', price: 35000, image: '../assets/images/set-1.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/set-2.jpg" alt="Set Premium">
+                            <h3>Set Premium</h3>
+                            <p>Set completo con yerbero de cuero, mate imperial y bombilla premium.</p>
+                            <span class="precio">$65.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-2', name: 'Set Premium', price: 65000, image: '../assets/images/set-2.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/set-3.jpg" alt="Set Personalizado">
+                            <h3>Set Personalizado</h3>
+                            <p>Creá tu propio set eligiendo yerbero, mate y bombilla.</p>
+                            <span class="precio">$40.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-3', name: 'Set Personalizado', price: 40000, image: '../assets/images/set-3.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo">
+                    <p class="footer-description">Tu compañero de cada mateada. Productos artesanales de la mejor calidad.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#productos">Productos</a></li>
+                        <li><a href="../index.html#historia">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +54 299 590-1714</li>
+                        <li><i class="fas fa-envelope"></i> mateicos.contacto@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Neuquén, Argentina</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Seguinos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/mateicos.oficial/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/mateicos" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/2995901714" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Mateicos – Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/2995901714" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button id="checkout-whatsapp" class="checkout-btn">
+                    Finalizar compra por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

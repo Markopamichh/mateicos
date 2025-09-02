@@ -14,14 +14,13 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="assets/images/logomateicos.webp" alt="Mateicos Logo">
+                <img src="assets/images/logo1.webp" alt="Mateicos Logo">
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#historia">Nuestra Historia</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#resenas">Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -30,11 +29,12 @@
                 <span class="cart-count">0</span>
             </div>
         </nav>
-        <div class="hero">
-            <h1>EL MATE</h1>
-            <p>El mejor motivo para reunirse con quienes amamos. -Mateicos</p>
-        </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <p>Bienvenidos</p>
+    </section>
 
     <!-- Main Content -->
     <main>
@@ -48,6 +48,7 @@
                     </div>
                     <h3>Mates</h3>
                     <p>Mates artesanales de calabaza, elaborados con las mejores técnicas tradicionales.</p>
+                    <a href="pages/mates.html" class="ver-categoria-btn">Ver Catálogo</a>
                 </div>
                 <div class="producto-card">
                     <div class="img-container">
@@ -55,6 +56,7 @@
                     </div>
                     <h3>Yerberos</h3>
                     <p>Yerberos con diseños únicos para mantener tu yerba siempre fresca.</p>
+                    <a href="pages/yerberos.html" class="ver-categoria-btn">Ver Catálogo</a>
                 </div>
                 <div class="producto-card">
                     <div class="img-container">
@@ -62,6 +64,7 @@
                     </div>
                     <h3>Bombillas</h3>
                     <p>Bombillas de acero inoxidable con diseños exclusivos.</p>
+                    <a href="pages/bombillas.html" class="ver-categoria-btn">Ver Catálogo</a>
                 </div>
             </div>
         </section>
@@ -88,17 +91,9 @@
             </div>
         </section>
 
-        <!-- Catálogo -->
-        <section id="catalogo" class="catalogo">
-            <h2>Catálogo de Productos</h2>
-            <div class="catalogo-grid" id="catalogo-productos">
-                <!-- Products will be loaded dynamically with JavaScript -->
-            </div>
-        </section>
-
         <!-- Historia -->
-        <section id="historia" class="historia">
-            <h2>Nuestra Historia</h2>
+        <section id="nosotros" class="historia">
+            <h2>Sobre Nosotros</h2>
             <div class="historia-content">
                 <img src="assets/images/imghistoria1.webp" alt="Historia Mateicos">
                 <div class="historia-texto">
@@ -111,7 +106,38 @@
         <section id="resenas" class="resenas">
             <h2>Lo que dicen nuestros clientes</h2>
             <div class="resenas-carousel">
-                <!-- Reviews will be loaded dynamically with JavaScript -->
+                <div class="resenas-track">
+                    <div class="resena-card">
+                        <h4>María González</h4>
+                        <p>"Excelente calidad y atención. Mi mate llegó perfecto y es hermoso."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                    <div class="resena-card">
+                        <h4>Carlos Martínez</h4>
+                        <p>"Los mejores mates de la zona. Recomiendo 100% Mateicos."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                    <div class="resena-card">
+                        <h4>Ana López</h4>
+                        <p>"Productos artesanales de primera calidad. Muy satisfecha con mi compra."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                    <div class="resena-card">
+                        <h4>María González</h4>
+                        <p>"Excelente calidad y atención. Mi mate llegó perfecto y es hermoso."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                    <div class="resena-card">
+                        <h4>Carlos Martínez</h4>
+                        <p>"Los mejores mates de la zona. Recomiendo 100% Mateicos."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                    <div class="resena-card">
+                        <h4>Ana López</h4>
+                        <p>"Productos artesanales de primera calidad. Muy satisfecha con mi compra."</p>
+                        <div class="estrellas">★★★★★</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -130,14 +156,13 @@
                     <ul class="footer-links">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#productos">Productos</a></li>
-                        <li><a href="#catalogo">Catálogo</a></li>
-                        <li><a href="#historia">Nuestra Historia</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <ul class="footer-contact">
+                    <ul class="footer-contact" id="contacto">
                         <li><i class="fas fa-phone"></i> +54 299 590-1714</li>
                         <li><i class="fas fa-envelope"></i> mateicos.contacto@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Neuquén, Argentina</li>
@@ -162,10 +187,6 @@
             
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Mateicos – Todos los derechos reservados</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Términos y Condiciones</a>
-                    <a href="#">Política de Privacidad</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -190,6 +211,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>

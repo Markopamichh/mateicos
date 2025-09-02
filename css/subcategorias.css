@@ -1,0 +1,289 @@
+/* Eliminar el espacio marrón completamente */
+html, body {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corregir el header para páginas de catálogo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 80px;
+}
+
+/* Asegurar que el catalogo-hero no tenga espacio arriba */
+.catalogo-hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 89, 57, 0.7)), url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+.catalogo-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    letter-spacing: 1px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.catalogo-hero p {
+    font-size: 1.2rem;
+    color: #E8F5E8;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Asegurar que main no tenga margen superior */
+main {
+    background: #FFFFFF !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+/* Asegurar que catalogo-section tenga fondo blanco */
+.catalogo-section {
+    background: #FFFFFF !important;
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+/* Subcategorías Grid */
+.subcategorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.subcategoria-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.subcategoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.subcategoria-card .img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.subcategoria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.subcategoria-card:hover img {
+    transform: scale(1.05);
+}
+
+.subcategoria-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.subcategoria-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Modal de Subcategorías */
+.catalogo-modal-content {
+    max-width: 1200px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#categoria-titulo {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 1rem 0 2rem;
+    font-size: 2rem;
+}
+
+/* Estilos para las páginas de catálogo */
+.catalogo-section {
+    background: #FFFFFF !important;
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+.container {
+    background: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subcategoria-section {
+    background: #FFFFFF;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.subcategoria-section h2 {
+    font-size: 2.5rem;
+    color: var(--verde-principal);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.subcategoria-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--verde-principal), var(--dorado));
+    border-radius: 2px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(46, 139, 87, 0.1);
+}
+
+.producto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--verde-principal), #2D5A3D);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    padding: 1rem;
+}
+
+.producto-card h3 {
+    font-size: 1.5rem;
+    color: var(--verde-principal);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.producto-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.precio {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dorado);
+    margin-bottom: 1.5rem;
+}
+
+.agregar-carrito {
+    background: linear-gradient(135deg, var(--verde-principal), #2D5A3D);
+    color: white !important;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+
+.agregar-carrito:hover {
+    background: linear-gradient(135deg, #2D5A3D, var(--verde-principal));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+    color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .catalogo-hero {
+        padding: 6rem 1rem 3rem !important;
+        background-attachment: scroll !important;
+    }
+    
+    .catalogo-hero h1 {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-hero {
+        padding: 5rem 1rem 2rem !important;
+    }
+    
+    .catalogo-hero h1 {
+        font-size: 2rem !important;
+    }
+}

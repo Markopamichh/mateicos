@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mates - Mateicos</title>
+    <link rel="icon" href="../assets/images/logo1.webp" type="image/webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/subcategorias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="catalogo-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo1.webp" alt="Mateicos Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="../index.html#historia">Nuestra Historia</a></li>
+                <li><a href="../index.html#resenas">Reseñas</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <section class="catalogo-hero">
+            <h1>Catálogo de Mates</h1>
+            <p>Mates artesanales de la mejor calidad para disfrutar cada mateada</p>
+        </section>
+
+        <!-- Catálogo de Mates -->
+        <section id="catalogo-mates" class="catalogo-section">
+            <div class="container">
+                
+                <!-- Mates Imperiales -->
+                <div class="subcategoria-section">
+                    <h2>Mates Imperiales</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/mate1.webp" alt="Mate Imperial Premium">
+                            <h3>Mate Imperial Premium</h3>
+                            <p>Mate de calabaza premium con detalles en alpaca.</p>
+                            <span class="precio">$15.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-1', name: 'Mate Imperial Premium', price: 15000, image: '../assets/images/mate1.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate2.webp" alt="Mate Imperial Clásico">
+                            <h3>Mate Imperial Clásico</h3>
+                            <p>Mate de calabaza con virola de alpaca tradicional.</p>
+                            <span class="precio">$12.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-2', name: 'Mate Imperial Clásico', price: 12000, image: '../assets/images/mate2.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate3.webp" alt="Mate Imperial Artesanal">
+                            <h3>Mate Imperial Artesanal</h3>
+                            <p>Elaborado con técnicas ancestrales y acabados únicos.</p>
+                            <span class="precio">$18.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-3', name: 'Mate Imperial Artesanal', price: 18000, image: '../assets/images/mate3.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mates Torpedo -->
+                <div class="subcategoria-section">
+                    <h2>Mates Torpedo</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/mate4.webp" alt="Mate Torpedo Premium">
+                            <h3>Mate Torpedo Premium</h3>
+                            <p>Diseño torpedo clásico con terminaciones premium.</p>
+                            <span class="precio">$13.500</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-1', name: 'Mate Torpedo Premium', price: 13500, image: '../assets/images/mate4.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate1.webp" alt="Mate Torpedo Clásico">
+                            <h3>Mate Torpedo Clásico</h3>
+                            <p>El torpedo tradicional de toda la vida, perfecto y cómodo.</p>
+                            <span class="precio">$11.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-2', name: 'Mate Torpedo Clásico', price: 11000, image: '../assets/images/mate1.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate2.webp" alt="Mate Torpedo Decorado">
+                            <h3>Mate Torpedo Decorado</h3>
+                            <p>Con grabados tradicionales y detalles únicos.</p>
+                            <span class="precio">$14.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-3', name: 'Mate Torpedo Decorado', price: 14000, image: '../assets/images/mate2.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mates Camionero -->
+                <div class="subcategoria-section">
+                    <h2>Mates Camionero</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/mate3.webp" alt="Mate Camionero Grande">
+                            <h3>Mate Camionero Grande</h3>
+                            <p>Mate de gran capacidad, ideal para compartir.</p>
+                            <span class="precio">$16.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-1', name: 'Mate Camionero Grande', price: 16000, image: '../assets/images/mate3.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate4.webp" alt="Mate Camionero Mediano">
+                            <h3>Mate Camionero Mediano</h3>
+                            <p>Perfecto equilibrio entre capacidad y comodidad.</p>
+                            <span class="precio">$14.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-2', name: 'Mate Camionero Mediano', price: 14000, image: '../assets/images/mate4.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/mate1.webp" alt="Mate Camionero Tradicional">
+                            <h3>Mate Camionero Tradicional</h3>
+                            <p>El mate camionero de siempre, con virola de alpaca.</p>
+                            <span class="precio">$12.500</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-3', name: 'Mate Camionero Tradicional', price: 12500, image: '../assets/images/mate1.webp'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo">
+                    <p class="footer-description">Tu compañero de cada mateada. Productos artesanales de la mejor calidad.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#productos">Productos</a></li>
+                        <li><a href="../index.html#historia">Nuestra Historia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +54 299 590-1714</li>
+                        <li><i class="fas fa-envelope"></i> mateicos.contacto@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Neuquén, Argentina</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Seguinos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/mateicos.oficial/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/mateicos" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/2995901714" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Mateicos – Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/2995901714" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button id="checkout-whatsapp" class="checkout-btn">
+                    Finalizar compra por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
