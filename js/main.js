@@ -1,6 +1,16 @@
 // Variables globales
 let cart = [];
 
+// Cargar carrito desde localStorage si existe
+const savedCart = localStorage.getItem('cart');
+if (savedCart) {
+    try {
+        cart = JSON.parse(savedCart);
+    } catch (e) {
+        cart = [];
+    }
+}
+
 // Productos del catálogo
 const productos = {
     'mates-imperiales': [
@@ -144,7 +154,6 @@ function addToCart(product) {
     }
     
     const existingItem = cart.find(item => item.id === product.id);
-    
     if (existingItem) {
         existingItem.quantity += 1;
         console.log('Cantidad aumentada:', existingItem);
@@ -159,7 +168,8 @@ function addToCart(product) {
         cart.push(newItem);
         console.log('Nuevo producto agregado:', newItem);
     }
-    
+    // Guardar carrito en localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
     console.log('Carrito actual:', cart);
     updateCartCount();
     updateCartDisplay();
@@ -223,6 +233,8 @@ function updateCartDisplay() {
 function removeFromCart(productId) {
     console.log('Removiendo producto:', productId);
     cart = cart.filter(item => item.id !== productId);
+    // Guardar carrito en localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
     updateCartDisplay();
     showNotification('Producto eliminado del carrito');
