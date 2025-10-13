@@ -22,7 +22,7 @@ html, body {
 
 /* Asegurar que el catalogo-hero no tenga espacio arriba */
 .catalogo-hero {
-    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 89, 57, 0.7)), url('../assets/images/hero-bg.jpg');
+    background: linear-gradient(rgba(137, 102, 70, 0.8), rgba(76, 55, 14, 0.999)), url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;

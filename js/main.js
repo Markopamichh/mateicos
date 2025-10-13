@@ -147,33 +147,49 @@ function setupCartEventListeners() {
 function addToCart(product) {
     console.log('Agregando producto al carrito:', product);
     
-    // Validar que el producto tenga las propiedades necesarias
-    if (!product || !product.id || !product.name || !product.price) {
-        console.error('Producto inválido:', product);
-        return;
+    try {
+        // Validación mejorada del producto
+        if (!product || typeof product !== 'object') {
+            throw new Error('Producto no válido');
+        }
+        
+        const requiredProps = ['id', 'name', 'price', 'image'];
+        for (const prop of requiredProps) {
+            if (!product[prop]) {
+                throw new Error(`Falta la propiedad ${prop} en el producto`);
+            }
+        }
+        
+        if (typeof product.price !== 'number' || product.price <= 0) {
+            throw new Error('El precio del producto no es válido');
+        }
+        
+        const existingItem = cart.find(item => item.id === product.id);
+        if (existingItem) {
+            existingItem.quantity += 1;
+            console.log('Cantidad aumentada:', existingItem);
+        } else {
+            const newItem = { 
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1 
+            };
+            cart.push(newItem);
+            console.log('Nuevo producto agregado:', newItem);
+        }
+        
+        // Guardar carrito en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log('Carrito actual:', cart);
+        updateCartCount();
+        updateCartDisplay();
+        showNotification('Producto agregado al carrito');
+    } catch (error) {
+        console.error('Error al agregar al carrito:', error);
+        showNotification('Error al agregar el producto', 'error');
     }
-    
-    const existingItem = cart.find(item => item.id === product.id);
-    if (existingItem) {
-        existingItem.quantity += 1;
-        console.log('Cantidad aumentada:', existingItem);
-    } else {
-        const newItem = { 
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image,
-            quantity: 1 
-        };
-        cart.push(newItem);
-        console.log('Nuevo producto agregado:', newItem);
-    }
-    // Guardar carrito en localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log('Carrito actual:', cart);
-    updateCartCount();
-    updateCartDisplay();
-    showNotification('Producto agregado al carrito');
 }
 
 // Función para actualizar el contador del carrito
@@ -190,11 +206,9 @@ function updateCartCount() {
 function updateCartDisplay() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
+    const checkoutBtn = document.getElementById('checkout-whatsapp');
     
     console.log('Actualizando display del carrito');
-    console.log('Cart items element:', cartItems);
-    console.log('Cart total element:', cartTotal);
-    console.log('Carrito:', cart);
     
     if (!cartItems || !cartTotal) {
         console.error('No se encontraron elementos del carrito');
@@ -206,26 +220,47 @@ function updateCartDisplay() {
 
     if (cart.length === 0) {
         cartItems.innerHTML = '<p style="text-align: center; color: #6C757D; padding: 20px;">Tu carrito está vacío</p>';
+        if (checkoutBtn) checkoutBtn.style.display = 'none';
     } else {
+        if (checkoutBtn) checkoutBtn.style.display = 'block';
+        
         cart.forEach(item => {
-            console.log('Procesando item:', item);
             const itemElement = document.createElement('div');
             itemElement.className = 'cart-item';
             itemElement.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" onerror="this.src='assets/images/placeholder.jpg'" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
+                <img src="${item.image}" alt="${item.name}" 
+                     onerror="this.src='assets/images/placeholder.jpg'" 
+                     style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
                 <div class="cart-item-details">
                     <h4>${item.name}</h4>
-                    <p>$${item.price.toLocaleString()} x ${item.quantity}</p>
-                    <p><strong>Subtotal: $${(item.price * item.quantity).toLocaleString()}</strong></p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity('${item.id}', -1)" 
+                                class="quantity-btn" 
+                                ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+                        <span class="quantity">${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.id}', 1)" 
+                                class="quantity-btn">+</button>
+                    </div>
+                    <p>Precio unitario: $${item.price.toLocaleString('es-AR')}</p>
+                    <p><strong>Subtotal: $${(item.price * item.quantity).toLocaleString('es-AR')}</strong></p>
                 </div>
-                <button onclick="removeFromCart('${item.id}')" class="remove-btn">×</button>
+                <button onclick="removeFromCart('${item.id}')" 
+                        class="remove-btn" 
+                        title="Eliminar producto">×</button>
             `;
             cartItems.appendChild(itemElement);
             total += item.price * item.quantity;
         });
+        
+        // Agregar botón para vaciar carrito
+        const clearCartBtn = document.createElement('button');
+        clearCartBtn.className = 'clear-cart-btn';
+        clearCartBtn.innerHTML = 'Vaciar Carrito';
+        clearCartBtn.onclick = clearCart;
+        cartItems.appendChild(clearCartBtn);
     }
 
-    cartTotal.textContent = total.toLocaleString();
+    cartTotal.textContent = total.toLocaleString('es-AR');
     console.log('Total calculado:', total);
 }
 
@@ -323,8 +358,83 @@ function initReviewsCarousel() {
     }
 }
 
+// Función para actualizar la cantidad de un producto
+function updateQuantity(productId, change) {
+    try {
+        const item = cart.find(item => item.id === productId);
+        if (!item) {
+            throw new Error('Producto no encontrado');
+        }
+
+        const newQuantity = item.quantity + change;
+        if (newQuantity < 1) {
+            return; // No permitir cantidades menores a 1
+        }
+
+        item.quantity = newQuantity;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        updateCartCount();
+        showNotification(`Cantidad actualizada: ${item.name}`);
+    } catch (error) {
+        console.error('Error al actualizar cantidad:', error);
+        showNotification('Error al actualizar cantidad', 'error');
+    }
+}
+
+// Función para vaciar el carrito
+function clearCart() {
+    if (confirm('¿Estás seguro de que deseas vaciar el carrito?')) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        updateCartCount();
+        showNotification('Carrito vaciado');
+    }
+}
+
+// Función mejorada para mostrar notificaciones
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        z-index: 3000;
+        font-weight: 500;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    `;
+    
+    // Estilos según el tipo de notificación
+    if (type === 'error') {
+        notification.style.backgroundColor = '#dc3545';
+    } else {
+        notification.style.backgroundColor = '#2E5945';
+    }
+    
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => notification.style.opacity = '1', 100);
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
 // Hacer funciones globales para que funcionen en el HTML
 window.addToCart = addToCart;
 window.removeFromCart = removeFromCart;
+window.updateQuantity = updateQuantity;
+window.clearCart = clearCart;
 
 console.log('main.js cargado completamente');
