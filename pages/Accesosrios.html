@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mates - Mateicos</title>
+    <title>Yerberos - Mateicos</title>
     <link rel="icon" href="../assets/images/logo1.webp" type="image/webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/subcategorias.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="catalogo-page">
+<body>
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
@@ -33,131 +33,114 @@
             </div>
         </nav>
     </header>
+
     <!-- Main Content -->
     <main>
         <section class="catalogo-hero">
-            <h1>Catálogo de Mates</h1>
-            <p>Mates artesanales de la mejor calidad para disfrutar cada mateada</p>
+            <h1>Catálogo de Accesorios</h1>
+            <p>Mantené tu yerba siempre fresca con nuestros yerberos artesanales</p>
         </section>
 
-        <!-- Catálogo de Mates -->
-        <section id="catalogo-mates" class="catalogo-section">
+        <!-- Catálogo de Yerberos -->
+        <section id="catalogo-yerberos" class="catalogo-section">
             <div class="container">
                 
-                <!-- Mates Imperiales -->
+                <!-- Yerberos Clásicos -->
                 <div class="subcategoria-section">
-                    <h2>Mates Imperiales</h2>
+                    <h2>Yerberos Clásicos</h2>
                     <div class="productos-grid">
                         <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo1.jpg" alt="Mate Imperial">
-                            <h3>Mate Imperial</h3>
-                            <p>Mate de algarrobo estilo Imperial. Virola de acero, alpaca o combinada. Consultar dibujos de fleje disponibles.</p>
-                            <span class="precio">$38.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-1', name: 'Mate Imperial', price: 38000, image: '../assets/images/matealgarrobo1.jpg'})">
+                            <img src="../assets/images/yerbero.jpeg" alt="Yerbero Madera Natural">
+                            <h3>Yerbero Madera Natural</h3>
+                            <p>Yerbero de madera de algarrobo con tapa hermética.</p>
+                            <span class="precio">$12.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-1', name: 'Yerbero Madera Natural', price: 12000, image: '../assets/images/yerbero-clasico-1.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo2.jpg" alt="Mate Imperial Con Base">
-                            <h3>Mate Imperial Con Base</h3>
-                            <p>Mate de algarrobo estilo Imperial con base de alpaca. Fleje y base de alpaca. Virola de acero. Consultar dibujo de fleje disponibles.</p>
-                            <span class="precio">$42.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-2', name: 'Mate Imperial Con Base', price: 42000, image: '../assets/images/matealgarrobo2.jpg'})">
+                            <img src="../assets/images/yerbero2.jpeg" alt="Yerbero Cerámica">
+                            <h3>Yerbero Cerámica</h3>
+                            <p>Diseño tradicional en cerámica esmaltada con motivos criollos.</p>
+                            <span class="precio">$15.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-2', name: 'Yerbero Cerámica', price: 15000, image: '../assets/images/yerbero-clasico-2.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo3.jpg" alt="Mate Imperial Huevito">
-                            <h3>Mate Imperial Huevito</h3>
-                            <p>Mate de algarrobo estilo Imperial sin base. Virola y Fleje de Acero.</p>
-                            <span class="precio">$37.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-3', name: 'Mate Imperial Huevito', price: 37000, image: '../assets/images/matealgarrobo3.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo4.jpg" alt="Mate  Panza De Loro">
-                            <h3>Mate Panza De Loro</h3>
-                            <p>Mate de algarrobo estilo Panza de Loro. Virola simple de Acero.</p>
-                            <span class="precio">$29.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-imp-4', name: 'Mate Panza De Loro', price: 29000, image: '../assets/images/matealgarrobo4.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/matecalabaza.jpg" alt="Mate Imperial Criollo">
-                            <h3>Mate Imperial Criollo</h3>
-                            <p>Mate de Calabaza estilo Criollo. Calabaza cruda, pulida en exterior. Base de cuero crudo sin refinar.</p>
-                            <span class="precio">$21.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cal-1', name: 'Mate Imperial Criollo', price: 21000, image: '../assets/images/matecalabaza.jpg'})">
+                            <img src="../assets/images/yerbero3.jpeg" alt="Yerbero Cuero">
+                            <h3>Yerbero Cuero</h3>
+                            <p>Yerbero forrado en cuero vacuno con cierre magnético.</p>
+                            <span class="precio">$18.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-clas-3', name: 'Yerbero Cuero', price: 18000, image: '../assets/images/yerbero-clasico-3.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mates Torpedo -->
+                <!-- Yerberos Premium -->
                 <div class="subcategoria-section">
-                    <h2>Mates Torpedo</h2>
+                    <h2>Yerberos Premium</h2>
                     <div class="productos-grid">
                         <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo6.jpg" alt="Mate Torpedo ">
-                            <h3>Mate Torpedo </h3>
-                            <p>Mate de algarrobo estilo Torpedo. Virola dorada de Alpaca teñida o plateada de Acero.</p>
+                            <img src="../assets/images/yerbero-premium-1.jpg" alt="Yerbero Diseñador">
+                            <h3>Yerbero Diseñador</h3>
+                            <p>Diseño moderno con compartimentos separados para diferentes yerbas.</p>
+                            <span class="precio">$28.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-1', name: 'Yerbero Diseñador', price: 28000, image: '../assets/images/yerbero-premium-1.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero-premium-2.jpg" alt="Yerbero Acero Inox">
+                            <h3>Yerbero Acero Inox</h3>
+                            <p>Construcción en acero inoxidable con sistema de vacío.</p>
+                            <span class="precio">$32.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-2', name: 'Yerbero Acero Inox', price: 32000, image: '../assets/images/yerbero-premium-2.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="producto-card">
+                            <img src="../assets/images/yerbero-premium-3.jpg" alt="Yerbero Luxury">
+                            <h3>Yerbero Luxury</h3>
+                            <p>Edición limitada con incrustaciones de plata y grabados.</p>
+                            <span class="precio">$45.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'yerb-prem-3', name: 'Yerbero Luxury', price: 45000, image: '../assets/images/yerbero-premium-3.jpg'})">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sets Completos -->
+                <div class="subcategoria-section">
+                    <h2>Sets Completos</h2>
+                    <div class="productos-grid">
+                        <div class="producto-card">
+                            <img src="../assets/images/set-1.jpg" alt="Set Tradicional">
+                            <h3>Set Tradicional</h3>
+                            <p>Yerbero + Mate + Bombilla en estuche de regalo.</p>
                             <span class="precio">$35.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-1', name: 'Mate Torpedo', price: 35000, image: '../assets/images/matealgarrobo6.jpg'})">
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-1', name: 'Set Tradicional', price: 35000, image: '../assets/images/set-1.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/mate1.webp" alt="Mate Torpedo Clásico">
-                            <h3>Mate Torpedo Clásico</h3>
-                            <p>El torpedo tradicional de toda la vida, perfecto y cómodo.</p>
-                            <span class="precio">$11.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-2', name: 'Mate Torpedo Clásico', price: 11000, image: '../assets/images/mate1.webp'})">
+                            <img src="../assets/images/set-2.jpg" alt="Set Premium">
+                            <h3>Set Premium</h3>
+                            <p>Set completo con yerbero de cuero, mate imperial y bombilla premium.</p>
+                            <span class="precio">$65.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-2', name: 'Set Premium', price: 65000, image: '../assets/images/set-2.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/mate2.webp" alt="Mate Torpedo Decorado">
-                            <h3>Mate Torpedo Decorado</h3>
-                            <p>Con grabados tradicionales y detalles únicos.</p>
-                            <span class="precio">$14.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-tor-3', name: 'Mate Torpedo Decorado', price: 14000, image: '../assets/images/mate2.webp'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mates Camionero -->
-                <div class="subcategoria-section">
-                    <h2>Mates Camionero</h2>
-                    <div class="productos-grid">
-                        <div class="producto-card">
-                            <img src="../assets/images/matealgarrobo5.jpg" alt="Mate Camionero ">
-                            <h3>Mate Camionero</h3>
-                            <p>Mate de algarrobo estilo Camionero. Virola simple de Acero.</p>
-                            <span class="precio">$29.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-1', name: 'Mate Camionero', price: 29000, image: '../assets/images/matealgarrobo5.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/mate4.webp" alt="Mate Camionero Mediano">
-                            <h3>Mate Camionero Mediano</h3>
-                            <p>Perfecto equilibrio entre capacidad y comodidad.</p>
-                            <span class="precio">$14.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-2', name: 'Mate Camionero Mediano', price: 14000, image: '../assets/images/mate4.webp'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/mate1.webp" alt="Mate Camionero Tradicional">
-                            <h3>Mate Camionero Tradicional</h3>
-                            <p>El mate camionero de siempre, con virola de alpaca.</p>
-                            <span class="precio">$12.500</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'mate-cam-3', name: 'Mate Camionero Tradicional', price: 12500, image: '../assets/images/mate1.webp'})">
+                            <img src="../assets/images/set-3.jpg" alt="Set Personalizado">
+                            <h3>Set Personalizado</h3>
+                            <p>Creá tu propio set eligiendo yerbero, mate y bombilla.</p>
+                            <span class="precio">$40.000</span>
+                            <button class="agregar-carrito" onclick="addToCart({id: 'set-3', name: 'Set Personalizado', price: 40000, image: '../assets/images/set-3.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>

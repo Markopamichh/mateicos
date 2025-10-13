@@ -19,7 +19,7 @@ const productos = {
             nombre: "Mate Imperial Premium",
             descripcion: "Mate de calabaza premium con detalles en alpaca",
             precio: 15000,
-            imagen: "../assets/images/mate3.webp"
+            imagen: "../assets/images/matecalabaza.jpg"
         },
         {
             id: 'mate-imp-2',
@@ -35,7 +35,7 @@ const productos = {
             nombre: "Mate Torpedo Premium",
             descripcion: "Mate torpedo de calabaza con detalles en alpaca",
             precio: 13500,
-            imagen: "../assets/images/mate2.webp"
+            imagen: "../assets/images/matealgarrobo1.jpg"
         }
     ],
     'mates-camionero': [
