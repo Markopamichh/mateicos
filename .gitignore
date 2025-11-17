@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+*.min.css
+*.min.js
+css/min/
+js/min/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+.cache/
+
+# Environment variables
+.env
+.env.local
+
+# WebP generated images (can be regenerated)
+assets/images/webp/
+
+# Test files
+test/
+*.test.js

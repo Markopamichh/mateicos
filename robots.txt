@@ -1,0 +1,22 @@
+# robots.txt para Mateicos
+# Permite a todos los bots indexar el sitio
+
+User-agent: *
+Allow: /
+
+# Disallow specific directories
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /js/
+Disallow: /css/
+
+# Allow important resources for Google
+Allow: /css/*.css
+Allow: /js/*.js
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://mateicos.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1

@@ -20,8 +20,74 @@
     <link rel="icon" href="./assets/images/logo1.webp" type="image/webp">
     <link rel="shortcut icon" href="./assets/images/logo1.webp" type="image/x-icon">
 
+    <!-- Resource Hints - Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="assets/images/logohero.webp">
+
     <!-- Schema.org para E-commerce -->
     <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Mateicos",
+                "url": "https://mateicos.com",
+                "logo": "https://mateicos.com/assets/images/logo1.webp",
+                "description": "Mateicos - Tu compañero de cada mateada. Mates y accesorios artesanales premium desde Neuquén, Argentina.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Neuquén",
+                    "addressCountry": "AR"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+54-299-590-1714",
+                    "contactType": "Customer Service",
+                    "email": "mateicos.contacto@gmail.com",
+                    "availableLanguage": "Spanish"
+                },
+                "sameAs": [
+                    "https://www.instagram.com/mateicos.oficial/",
+                    "https://facebook.com/mateicos",
+                    "https://wa.me/2995901714"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "name": "Mateicos",
+                "url": "https://mateicos.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://mateicos.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Store",
+                "name": "Mateicos",
+                "image": "https://mateicos.com/assets/images/logohero.webp",
+                "telephone": "+54-299-590-1714",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Neuquén",
+                    "addressRegion": "Neuquén",
+                    "addressCountry": "AR"
+                },
+                "priceRange": "$$",
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                    "opens": "09:00",
+                    "closes": "20:00"
+                }
+            }
+        ]
+    }
     </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/nav.css">
@@ -40,18 +106,23 @@
                     <img src="./assets/images/logo1.webp" alt="Mateicos - Tienda de Mates Premium" width="180" height="60">
                 </a>
             </div>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#resenas">Reseñas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <div class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
@@ -68,7 +139,7 @@
             <div class="productos-grid">
                 <div class="producto-card">
                     <div class="img-container">
-                        <img src="assets/images/matecalabaza.jpg" alt="Mates">
+                        <img src="assets/images/matecalabaza.jpg" alt="Mates" width="300" height="300" loading="lazy">
                     </div>
                     <h3>Mates</h3>
                     <p>Mates artesanales de calabaza, elaborados con las mejores técnicas tradicionales.</p>
@@ -76,7 +147,7 @@
                 </div>
                 <div class="producto-card">
                     <div class="img-container">
-                        <img src="assets/images/yerbero1.jpg" alt="Yerberos">
+                        <img src="assets/images/yerbero1.jpg" alt="Yerberos" width="300" height="300" loading="lazy">
                     </div>
                     <h3>Accesorios</h3>
                     <p>Accesorios para acomparñar una buena mateada</p>
@@ -84,7 +155,7 @@
                 </div>
                 <div class="producto-card">
                     <div class="img-container">
-                        <img src="assets/images/bombillaprincipal.jpg" alt="Bombillas">
+                        <img src="assets/images/bombillaprincipal.jpg" alt="Bombillas" width="300" height="300" loading="lazy">
                     </div>
                     <h3>Bombillas</h3>
                     <p>Bombillas de acero inoxidable con diseños exclusivos.</p>
@@ -119,7 +190,7 @@
         <section id="nosotros" class="historia">
             <h2>Sobre Nosotros</h2>
             <div class="historia-content">
-                <img src="assets/images/imghistoria1.webp" alt="Historia Mateicos">
+                <img src="assets/images/fundadores.jpg" alt="Historia Mateicos" width="500" height="400" loading="lazy">
                 <div class="historia-texto">
                     <p>El mate no es solo una infusión...Surgido en Neuquén, en la Patagonia, de la amistad de cuatro amigos apasionados por el mate. Este emprendimiento nace con el deseo de inmortalizar esa unión y compartir con todos el cariño, la tradición y la pasión que sentimos por la cultura mas linda que existe en el mundo.Más que una marca, Mateicos es una familia, una comunidad que celebra el mate como el símbolo más purode la amistad y la unión.</p>
                 </div>
@@ -132,22 +203,22 @@
             <div class="resenas-carousel">
                 <div class="resenas-track">
                     <div class="resena-card">
-                        <h4>María González</h4>
+                        <h4>Marko Pamich</h4>
                         <p>"Excelente calidad y atención. Mi mate llegó perfecto y es hermoso."</p>
                         <div class="estrellas">★★★★★</div>
                     </div>
                     <div class="resena-card">
-                        <h4>Carlos Martínez</h4>
+                        <h4>Graciela Srevernic</h4>
                         <p>"Los mejores mates de la zona. Recomiendo 100% Mateicos."</p>
                         <div class="estrellas">★★★★★</div>
                     </div>
                     <div class="resena-card">
-                        <h4>Ana López</h4>
-                        <p>"Productos artesanales de primera calidad. Muy satisfecha con mi compra."</p>
+                        <h4>Tomas Djenderedjian</h4>
+                        <p>"Productos de primera calidad. Muy satisfecho con mi compra."</p>
                         <div class="estrellas">★★★★★</div>
                     </div>
                     <div class="resena-card">
-                        <h4>María González</h4>
+                        <h4>Martin Pamich</h4>
                         <p>"Excelente calidad y atención. Mi mate llegó perfecto y es hermoso."</p>
                         <div class="estrellas">★★★★★</div>
                     </div>
@@ -171,7 +242,7 @@
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <img src="assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo">
+                    <img src="assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo" width="150" height="50" loading="lazy">
                     <p class="footer-description">Tu compañero de cada mateada. Productos artesanales de la mejor
                         calidad.</p>
                 </div>
@@ -237,7 +308,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

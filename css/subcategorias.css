@@ -22,9 +22,17 @@ html, body {
 
 /* Asegurar que el catalogo-hero no tenga espacio arriba */
 .catalogo-hero {
-    background: linear-gradient(rgba(137, 102, 70, 0.8), rgba(76, 55, 14, 0.999)), url('../assets/images/hero-bg.jpg');
+    /* WebP with JPG fallback for better performance */
+    background-image: url('../assets/images/catalogohero.jpg'); /* Fallback */
+    background-image: -webkit-image-set(
+        url('../assets/images/webp/catalogohero.webp') 1x
+    );
+    background-image: image-set(
+        url('../assets/images/webp/catalogohero.webp') 1x
+    );
     background-size: cover;
     background-position: center;
+    background-attachment: scroll;
     color: white;
     text-align: center;
     padding: 8rem 2rem 4rem;
@@ -32,6 +40,18 @@ html, body {
     position: relative;
     width: 100%;
     top: 0;
+}
+
+/* Overlay de gradiente para mejor legibilidad */
+.catalogo-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(35, 60, 48, 0.75) 0%, rgba(212, 184, 149, 0.4) 100%);
+    z-index: 1;
 }
 
 .catalogo-hero h1 {

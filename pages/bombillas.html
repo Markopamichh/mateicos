@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bombillas - Mateicos</title>
+    <title>Bombillas de Acero Inoxidable Premium | Mateicos</title>
+    <meta name="description" content="Bombillas de acero inoxidable con diseños exclusivos. Bombillas premium, especiales y clásicas para tu mate. Desde $8.000. Envíos a todo el país.">
+    <meta name="keywords" content="bombillas, bombilla acero inoxidable, bombilla premium, bombilla alpaca, bombillas para mate, accesorios mate">
+    <meta name="author" content="Mateicos">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bombillas de Acero Inoxidable Premium | Mateicos">
+    <meta property="og:description" content="Bombillas de acero inoxidable con diseños exclusivos. Desde $8.000. Envíos a todo el país.">
+    <meta property="og:image" content="https://mateicos.com/assets/images/bombillaprincipal.jpg">
+    <meta property="og:url" content="https://mateicos.com/pages/bombillas.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bombillas Premium | Mateicos">
+    <meta name="twitter:description" content="Bombillas de acero inoxidable con diseños exclusivos. Desde $8.000.">
+    <meta name="twitter:image" content="https://mateicos.com/assets/images/bombillaprincipal.jpg">
+
+    <link rel="canonical" href="https://mateicos.com/pages/bombillas.html">
     <link rel="icon" href="../assets/images/logo1.webp" type="image/webp">
     <link rel="shortcut icon" href="../assets/images/logo1.webp" type="image/x-icon">
+
+    <!-- Resource Hints - Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Preload Critical Hero Background -->
+    <link rel="preload" as="image" href="../assets/images/catalogohero.jpg">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/cart.css">
@@ -22,6 +50,11 @@
                     <img src="../assets/images/logo1.webp" alt="Mateicos - Tienda de Mates Premium" width="150" height="50">
                 </a>
             </div>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../index.html#productos">Productos</a></li>
@@ -53,7 +86,7 @@
                     <h2>Bombillas Clásicas</h2>
                     <div class="productos-grid">
                         <div class="producto-card">
-                            <img src="../assets/images/bombilla.jpeg" alt="Bombilla Acero Simple">
+                            <img src="../assets/images/bombilla.jpeg" alt="Bombilla Acero Simple" width="300" height="250" loading="lazy">
                             <h3>Bombilla Acero Simple</h3>
                             <p>Bombilla de acero inoxidable con filtro tradicional.</p>
                             <span class="precio">$5.000</span>
@@ -62,7 +95,7 @@
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/bombilla2.webp" alt="Bombilla Alpaca">
+                            <img src="../assets/images/bombilla2.webp" alt="Bombilla Alpaca" width="300" height="250" loading="lazy">
                             <h3>Bombilla Alpaca</h3>
                             <p>Bombilla de alpaca con terminaciones pulidas a mano.</p>
                             <span class="precio">$8.000</span>
@@ -71,79 +104,11 @@
                             </button>
                         </div>
                         <div class="producto-card">
-                            <img src="../assets/images/bombilla3.webp" alt="Bombilla Curva">
+                            <img src="../assets/images/bombilla3.webp" alt="Bombilla Curva" width="300" height="250" loading="lazy">
                             <h3>Bombilla Curva</h3>
                             <p>Diseño curvado tradicional para mayor comodidad.</p>
                             <span class="precio">$6.500</span>
                             <button class="agregar-carrito" onclick="addToCart({id: 'bomb-clas-3', name: 'Bombilla Curva', price: 6500, image: '../assets/images/bombilla-clasica-3.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bombillas Premium -->
-                <div class="subcategoria-section">
-                    <h2>Bombillas Premium</h2>
-                    <div class="productos-grid">
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-premium-1.jpg" alt="Bombilla Oro">
-                            <h3>Bombilla Oro</h3>
-                            <p>Bombilla con baño de oro 18k y filtro de alta precisión.</p>
-                            <span class="precio">$25.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-prem-1', name: 'Bombilla Oro', price: 25000, image: '../assets/images/bombilla-premium-1.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-premium-2.jpg" alt="Bombilla Plata">
-                            <h3>Bombilla Plata</h3>
-                            <p>Bombilla de plata 925 con grabados artesanales únicos.</p>
-                            <span class="precio">$18.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-prem-2', name: 'Bombilla Plata', price: 18000, image: '../assets/images/bombilla-premium-2.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-premium-3.jpg" alt="Bombilla Titanio">
-                            <h3>Bombilla Titanio</h3>
-                            <p>Material ultra liviano y resistente con diseño moderno.</p>
-                            <span class="precio">$22.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-prem-3', name: 'Bombilla Titanio', price: 22000, image: '../assets/images/bombilla-premium-3.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bombillas Especiales -->
-                <div class="subcategoria-section">
-                    <h2>Bombillas Especiales</h2>
-                    <div class="productos-grid">
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-especial-1.jpg" alt="Bombilla Ecológica">
-                            <h3>Bombilla Ecológica</h3>
-                            <p>Fabricada con materiales 100% reciclables y sostenibles.</p>
-                            <span class="precio">$12.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-esp-1', name: 'Bombilla Ecológica', price: 12000, image: '../assets/images/bombilla-especial-1.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-especial-2.jpg" alt="Bombilla LED">
-                            <h3>Bombilla LED</h3>
-                            <p>Innovadora bombilla con luz LED integrada para mate nocturno.</p>
-                            <span class="precio">$15.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-esp-2', name: 'Bombilla LED', price: 15000, image: '../assets/images/bombilla-especial-2.jpg'})">
-                                Agregar al carrito
-                            </button>
-                        </div>
-                        <div class="producto-card">
-                            <img src="../assets/images/bombilla-especial-3.jpg" alt="Bombilla Temática">
-                            <h3>Bombilla Temática</h3>
-                            <p>Diseños especiales con motivos de equipos de fútbol.</p>
-                            <span class="precio">$10.000</span>
-                            <button class="agregar-carrito" onclick="addToCart({id: 'bomb-esp-3', name: 'Bombilla Temática', price: 10000, image: '../assets/images/bombilla-especial-3.jpg'})">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -159,7 +124,7 @@
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <img src="../assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo">
+                    <img src="../assets/images/logomateicos.webp" alt="Mateicos Logo" class="footer-logo" width="150" height="50" loading="lazy">
                     <p class="footer-description">Tu compañero de cada mateada. Productos artesanales de la mejor calidad.</p>
                 </div>
                 
@@ -224,6 +189,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+{
+  "name": "mateicos",
+  "version": "2.0.0",
+  "description": "Mateicos E-commerce - Mates y accesorios artesanales premium",
+  "author": "Mateicos",
+  "license": "MIT",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:html": "node scripts/optimize-html.js",
+    "minify": "node scripts/minify-assets.js",
+    "minify:css": "node scripts/minify-assets.js css",
+    "minify:js": "node scripts/minify-assets.js js",
+    "build": "npm run optimize:images && npm run minify"
+  },
+  "keywords": [
+    "ecommerce",
+    "mates",
+    "artesanal",
+    "argentina",
+    "webp",
+    "optimization",
+    "performance"
+  ],
+  "dependencies": {
+    "clean-css": "^5.3.3",
+    "sharp": "^0.33.0",
+    "terser": "^5.44.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

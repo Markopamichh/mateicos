@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Página Principal -->
+    <url>
+        <loc>https://mateicos.com/</loc>
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://mateicos.com/assets/images/logohero.webp</image:loc>
+            <image:title>Mateicos - Tu compañero de cada mateada</image:title>
+        </image:image>
+    </url>
+
+    <!-- Catálogo de Mates -->
+    <url>
+        <loc>https://mateicos.com/pages/mates.html</loc>
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mateicos.com/assets/images/matealgarrobo1.jpg</image:loc>
+            <image:title>Mates Artesanales - Imperial, Torpedo y Camionero</image:title>
+        </image:image>
+    </url>
+
+    <!-- Catálogo de Bombillas -->
+    <url>
+        <loc>https://mateicos.com/pages/bombillas.html</loc>
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mateicos.com/assets/images/bombillaprincipal.jpg</image:loc>
+            <image:title>Bombillas de Acero Inoxidable Premium</image:title>
+        </image:image>
+    </url>
+
+    <!-- Catálogo de Yerberos -->
+    <url>
+        <loc>https://mateicos.com/pages/yerberos.html</loc>
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mateicos.com/assets/images/yerbero1.jpg</image:loc>
+            <image:title>Yerberos y Sets Materos Artesanales</image:title>
+        </image:image>
+    </url>
+
+    <!-- Catálogo de Accesorios -->
+    <url>
+        <loc>https://mateicos.com/pages/Accesosrios.html</loc>
+        <lastmod>2025-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://mateicos.com/assets/images/yerbero1.jpg</image:loc>
+            <image:title>Accesorios para Mate</image:title>
+        </image:image>
+    </url>
+
+</urlset>
