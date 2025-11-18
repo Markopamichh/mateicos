@@ -58,23 +58,6 @@ body {
     width: auto;
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--texto-oscuro);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: var(--verde-principal);
-}
-
 .cart-icon {
     position: relative;
     cursor: pointer;
