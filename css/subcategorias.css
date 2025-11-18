@@ -302,8 +302,121 @@ main {
     .catalogo-hero {
         padding: 5rem 1rem 2rem !important;
     }
-    
+
     .catalogo-hero h1 {
         font-size: 2rem !important;
     }
+}
+
+/* Carrusel de imágenes en producto-card */
+.producto-image-carousel {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f8f9fa;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin: 0;
+    background: transparent;
+}
+
+.carousel-container img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(46, 89, 69, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.carousel-btn:hover {
+    background: rgba(46, 89, 69, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(46, 89, 69, 0.3);
+}
+
+.carousel-indicator.active {
+    background: var(--verde-principal);
+    border-color: var(--verde-principal);
+    width: 12px;
+    height: 12px;
+}
+
+/* Ajustar el padding de producto-card ya que el carrusel maneja su propio espacio */
+.producto-card.has-carousel {
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.producto-card.has-carousel .producto-image-carousel {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+    width: calc(100% + 4rem);
+    border-radius: 20px 20px 0 0;
 }

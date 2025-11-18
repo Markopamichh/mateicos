@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupCartEventListeners();
     initReviewsCarousel();
     initMobileMenu();
+    initProductCarousels();
 });
 
 // ============================================
@@ -380,6 +381,75 @@ function initMobileMenu() {
             hamburger.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
         }
+    });
+}
+
+// ============================================
+// PRODUCT IMAGE CAROUSEL
+// ============================================
+
+function initProductCarousels() {
+    const carousels = document.querySelectorAll('.producto-image-carousel');
+
+    carousels.forEach(carousel => {
+        const container = carousel.querySelector('.carousel-container');
+        const images = container.querySelectorAll('img');
+        const prevBtn = container.querySelector('.carousel-btn.prev');
+        const nextBtn = container.querySelector('.carousel-btn.next');
+        const indicators = container.querySelectorAll('.carousel-indicator');
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            // Remove active class from all images and indicators
+            images.forEach(img => img.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+
+            // Add active class to current image and indicator
+            images[index].classList.add('active');
+            indicators[index].classList.add('active');
+
+            currentIndex = index;
+        }
+
+        function nextImage() {
+            const nextIndex = (currentIndex + 1) % images.length;
+            showImage(nextIndex);
+        }
+
+        function prevImage() {
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(prevIndex);
+        }
+
+        // Event listeners for buttons
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                prevImage();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                nextImage();
+            });
+        }
+
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                showImage(index);
+            });
+        });
+
+        // Optional: Auto-advance carousel every 5 seconds
+        // setInterval(nextImage, 5000);
     });
 }
 
