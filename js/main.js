@@ -326,15 +326,28 @@ function showNotification(message) {
 // ============================================
 
 function initMobileMenu() {
+    console.log('🔧 Initializing mobile menu...');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (!hamburger || !navMenu) return;
+    console.log('Hamburger element:', hamburger);
+    console.log('Nav menu element:', navMenu);
+
+    if (!hamburger || !navMenu) {
+        console.error('❌ CRITICAL: Hamburger or nav menu not found!');
+        return;
+    }
+
+    console.log('✅ Elements found, adding click listener...');
 
     // Toggle menu
     hamburger.addEventListener('click', () => {
+        console.log('🍔 HAMBURGER CLICKED!');
         const isActive = hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        console.log('Menu state:', isActive ? '🟢 OPEN' : '🔴 CLOSED');
+        console.log('Hamburger classes:', hamburger.classList.toString());
+        console.log('Nav menu classes:', navMenu.classList.toString());
         hamburger.setAttribute('aria-expanded', isActive);
         document.body.style.overflow = isActive ? 'hidden' : '';
     });

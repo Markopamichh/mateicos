@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 9998;
     height: 70px; /* Altura fija para el header */
 }
 
@@ -191,22 +191,24 @@
 
     .nav-menu {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 70px;
         left: 0;
         width: 100%;
-        background: #ffffff;
-        background-color: #ffffff;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
         flex-direction: column;
         padding: 1.5rem 1rem;
         box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         border-top: 2px solid #2E5945;
-        z-index: 1001;
-        opacity: 1;
+        z-index: 9999;
+        opacity: 1 !important;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-menu li {

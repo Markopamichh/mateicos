@@ -6,7 +6,8 @@
       "Bash(node optimize-html.js:*)",
       "Bash(node minify-assets.js:*)",
       "Bash(node add-hamburger.js:*)",
-      "Bash(npm run minify:js:*)"
+      "Bash(npm run minify:js:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []
